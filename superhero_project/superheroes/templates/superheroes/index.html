@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Superhero Index</title>
 </head>
 <body>
+    <!-- Add bootstrap cdn -->
+    <!-- Wrap everything in a class containter, then a class row -->
+    <!-- Add an empty col-3 before the list -->
+    <!-- Put the list in a col-6 -->
+    <!-- Add an empty col-3 after the list -->
     <h1>List of Heroes</h1>
     <ul>
         {% for hero in all_heroes%}
@@ -19,6 +25,9 @@
     </ul>
 
     <a href="{% url 'superheroes:create' %}">Add New Hero</a>
+
+    {% load static %}
+    <img src="{% static 'spiderman.jpg' %}" alt="My image">
 
 
 </body>
